@@ -1,2 +1,2 @@
 # LibraryApplicationProject
-University Course project
+University Course "Java & SQL Project"
