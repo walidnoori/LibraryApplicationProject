@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginregister.view.FXMLHomePageController">
+   <children>
+      <Pane id="StorePanel" fx:id="StorePane" layoutX="7.0" layoutY="29.0" prefHeight="371.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+         <children>
+            <TableView fx:id="tableviewstore" prefHeight="373.0" prefWidth="600.0">
+               <columns>
+                  <TableColumn fx:id="bookNameColumn" prefWidth="205.0" text="Book Name" />
+                  <TableColumn fx:id="authorColumn" prefWidth="199.0" text="Author" />
+                  <TableColumn fx:id="priceColumn" prefWidth="126.0" text="Price" />
+                  <TableColumn fx:id="discountColumn" minWidth="0.0" prefWidth="69.0" text="Discount" />
+               </columns>
+            </TableView>
+         </children></Pane>
+      <Button id="StoreButton" layoutY="1.0" mnemonicParsing="false" onAction="#StoreButton" prefHeight="27.0" prefWidth="203.0" text="Store" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Button id="MyBooksButton" layoutX="206.0" layoutY="2.0" mnemonicParsing="false" onAction="#MyBooksButton" prefWidth="203.0" text="My Books" textAlignment="CENTER" AnchorPane.leftAnchor="203.0" AnchorPane.topAnchor="0.0" />
+      <Button id="ProfileButton" layoutX="406.0" mnemonicParsing="false" onAction="#ProfileButton" prefHeight="27.0" prefWidth="203.0" text="Profile" textAlignment="CENTER" AnchorPane.leftAnchor="406.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane id="MyBooksPanel" fx:id="MyBooksPane" layoutX="10.0" layoutY="39.0" prefHeight="371.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+         <children>
+            <TableView fx:id="tableviewmybooks" prefHeight="347.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="MybookNameColumn" prefWidth="205.0" text="Book Name" />
+                <TableColumn fx:id="MyauthorColumn" prefWidth="199.0" text="Author" />
+                  <TableColumn fx:id="MypriceColumn" prefWidth="126.0" text="Price" />
+                  <TableColumn fx:id="MydiscountColumn" minWidth="0.0" prefWidth="69.0" text="Discount" />
+              </columns>
+            </TableView>
+            <Button layoutY="346.0" mnemonicParsing="false" onAction="#SellBooksButton" prefHeight="27.0" prefWidth="79.0" text="Sell Book" />
+         </children></Pane>
+      <Pane id="ProfilePane" fx:id="ProfilePane" layoutX="20.0" layoutY="49.0" prefHeight="371.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="27.0">
+         <children>
+            <Label id="BookPoint" layoutX="342.0" layoutY="36.0" text="Book Points">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label id="UserName" layoutX="21.0" layoutY="36.0" text="Name ">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label id="Email" layoutX="21.0" layoutY="96.0" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label id="nametext" fx:id="usernametext" layoutX="83.0" layoutY="37.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label id="lastnametxt" fx:id="userLastnametext" layoutX="83.0" layoutY="66.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label id="emailtext" fx:id="userEmailtext" layoutX="83.0" layoutY="97.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label id="statutext" fx:id="userCredittext" layoutX="457.0" layoutY="37.0" text="Label">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button layoutX="363.0" layoutY="62.0" mnemonicParsing="false" onAction="#AddPointsButton" prefHeight="17.0" prefWidth="107.0" text="add points" />
+         </children></Pane>
+      <Pane id="SellPanel" fx:id="SellPane" layoutX="48.0" layoutY="66.0" prefHeight="282.0" prefWidth="506.0" style="-fx-background-color: #E4F1FE;" visible="false">
+         <children>
+            <Button layoutX="379.0" layoutY="233.0" mnemonicParsing="false" onAction="#SellButtonok" text="Sell" />
+            <Label id="BookName" layoutX="21.0" layoutY="37.0" text="Book Name">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="Author" layoutX="21.0" layoutY="76.0" text="Author">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="Price" layoutX="21.0" layoutY="112.0" text="Price">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label id="Discount" layoutX="21.0" layoutY="149.0" text="Discount">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField id="BooknameField" fx:id="booknamefield" layoutX="130.0" layoutY="34.0" prefHeight="27.0" prefWidth="232.0" />
+            <TextField id="AuthorField" fx:id="authorfield" layoutX="130.0" layoutY="73.0" prefHeight="27.0" prefWidth="232.0" />
+            <TextField id="PriceField" fx:id="pricefield" layoutX="130.0" layoutY="109.0" prefHeight="27.0" prefWidth="118.0" />
+            <TextField id="DiscountField" fx:id="discountfield" layoutX="130.0" layoutY="146.0" prefHeight="27.0" prefWidth="118.0" />
+            <Button layoutX="433.0" layoutY="233.0" mnemonicParsing="false" onAction="#SellButtoncancel" text="cancel" />
+         </children>
+      </Pane>
+      <Pane id="BookpointPane" fx:id="Pointpane" layoutX="96.0" layoutY="75.0" prefHeight="282.0" prefWidth="371.0" style="-fx-background-color: #E4F1FE;" visible="false">
+         <children>
+            <Label id="namelabel" layoutX="24.0" layoutY="14.0" text="NAME" />
+            <Label id="lastnamelabel" layoutX="23.0" layoutY="48.0" text="Last name" />
+            <Label id="addreslabel" layoutX="22.0" layoutY="86.0" text="Address" />
+            <Label id="cardnumberlabel" layoutX="23.0" layoutY="122.0" text="Cardnumber" />
+            <Label id="Cvclabel" layoutX="24.0" layoutY="155.0" text="Cvc" />
+            <Label id="amountlabel" layoutX="26.0" layoutY="194.0" text="Amount" />
+            <TextField id="namefield" fx:id="paymentnamefield" layoutX="121.0" layoutY="9.0" />
+            <TextField id="lastnamefield" fx:id="paymentlastnamefield" layoutX="121.0" layoutY="43.0" />
+            <TextField id="addresfield" fx:id="paymentaddressfield" layoutX="121.0" layoutY="81.0" />
+            <TextField id="cardnumberfield" fx:id="paymentcardnumberfield" layoutX="121.0" layoutY="117.0" />
+            <TextField id="Cvcfield" fx:id="paymentcvcfield" layoutX="121.0" layoutY="150.0" />
+            <TextField id="Amountfield" fx:id="paymentamountfield" layoutX="121.0" layoutY="189.0" />
+            <Button id="Buy" layoutX="204.0" layoutY="232.0" mnemonicParsing="false" onAction="#BuyPointButton" text="Buy" />
+            <Button id="Cancel" layoutX="276.0" layoutY="232.0" mnemonicParsing="false" onAction="#CancelPointsButton" text="Cancel" />
+         </children>
+      </Pane>
+      <Pane id="AddBookToMybook" fx:id="BuyBookPane" layoutX="59.0" layoutY="68.0" prefHeight="282.0" prefWidth="480.0" style="-fx-background-color: #E4F1FE;" visible="false">
+         <children>
+            <Label layoutX="33.0" layoutY="22.0" text="Book Name" />
+            <Label layoutX="33.0" layoutY="61.0" text="Auther" />
+            <Label layoutX="32.0" layoutY="97.0" text="Price" />
+            <Label layoutX="33.0" layoutY="133.0" text="Discount" />
+            <Label layoutX="32.0" layoutY="164.0" text="Price with Discount" />
+            <Button id="BuyButton" layoutX="301.0" layoutY="227.0" mnemonicParsing="false" onAction="#buyBookButton" text="Buy" />
+            <Button layoutX="374.0" layoutY="227.0" mnemonicParsing="false" onAction="#BuycancelButton" text="Cancel" />
+            <Text id="BookNameText" fx:id="BooknameB" layoutX="150.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="325.21875" />
+            <Text id="AuthorText" fx:id="BookAuthorB" layoutX="150.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="325.21875" />
+            <Text id="PriceText" fx:id="BookPriceB" layoutX="150.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="325.21875" />
+            <Text id="DiscountText" fx:id="BookDiscountB" layoutX="150.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="325.21875" />
+            <Text id="PriceDiscountText" fx:id="BookDiscountedPriceB" layoutX="170.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="139.0000022649765" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
